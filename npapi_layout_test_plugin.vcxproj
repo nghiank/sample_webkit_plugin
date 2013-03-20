@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AcCfg)\AutoCAD.Cpp.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>npapi_layout_test_plugin</ProjectName>
+    <ProjectGuid>{BE6D5659-A8D5-4890-A42C-090DD10EF62C}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IntDir>$(GOBJ)\npapi_layout_test_plugin\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link Condition="'$(Configuration)'=='Debug' or '$(AlwaysOptimize)'=='true'">
+      <AdditionalDependencies>rpcrt4.lib;wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;comctl32.lib;imm32.lib;d2d1.lib;oleacc.lib;appcache.lib;avcodec-53.lib;avformat-53.lib;avutil-51.lib;base.lib;base_i18n.lib;base_static.lib;blob.lib;breakpad_handler.lib;command_buffer_client.lib;command_buffer_common.lib;cpu_features.lib;crcrypto.lib;crnspr.lib;crnss.lib;database.lib;dynamic_annotations.lib;fileapi.lib;gles2_cmd_helper.lib;gles2_c_lib.lib;gles2_implementation.lib;glue.lib;gl.lib;gmock.lib;googleurl.lib;iccjpeg.lib;icui18n.lib;icuuc.lib;il.lib;leveldatabase.lib;libjpeg.lib;libpng.lib;libtess.lib;libwebp_dec.lib;libwebp_enc.lib;libxml2.lib;libxslt.lib;media.lib;modp_b64.lib;net.lib;osmesa.lib;ots.lib;quota.lib;sdch.lib;sfntly.lib;skia.lib;skia_libtess.lib;skia_opts.lib;sql.lib;sqlite3.lib;surface.lib;ui.lib;v8-i18n.lib;v8.lib;webcore_bindings.lib;webcore_dom.lib;webcore_html.lib;webcore_platform.lib;webcore_remaining.lib;webcore_rendering.lib;webcore_svg.lib;webkit.lib;webkit_gpu.lib;webkit_media.lib;webkit_support.lib;webkit_support_common.lib;webkit_support_gfx.lib;webkit_user_agent.lib;wtf.lib;yarr.lib;yuv_convert.lib;yuv_convert_simd_x86.lib;zlib.lib;ssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(COMPTOP)\global\src\OpenSource\Chromium\binary\lib\win\$(ACPLATFORM)\$(DEBREL);$(GLIB);$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries></IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>npapi_layout_test_plugin.def</ModuleDefinitionFile>
+    </Link>
+    <Link Condition="'$(Configuration)'=='Release'">
+      <AdditionalDependencies>rpcrt4.lib;wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;comctl32.lib;imm32.lib;d2d1.lib;oleacc.lib;appcache.lib;avcodec-53.lib;avformat-53.lib;avutil-51.lib;base.lib;base_i18n.lib;base_static.lib;blob.lib;breakpad_handler.lib;command_buffer_client.lib;command_buffer_common.lib;cpu_features.lib;crcrypto.lib;crnspr.lib;crnss.lib;database.lib;dynamic_annotations.lib;fileapi.lib;gles2_cmd_helper.lib;gles2_c_lib.lib;gles2_implementation.lib;glue.lib;gl.lib;gmock.lib;googleurl.lib;iccjpeg.lib;icui18n.lib;icuuc.lib;il.lib;leveldatabase.lib;libjpeg.lib;libpng.lib;libtess.lib;libwebp_dec.lib;libwebp_enc.lib;libxml2.lib;libxslt.lib;media.lib;modp_b64.lib;net.lib;osmesa.lib;ots.lib;quota.lib;sdch.lib;sfntly.lib;skia.lib;skia_libtess.lib;skia_opts.lib;sql.lib;sqlite3.lib;surface.lib;ui.lib;v8-i18n.lib;v8.lib;webcore_bindings.lib;webcore_dom.lib;webcore_html.lib;webcore_platform.lib;webcore_remaining.lib;webcore_rendering.lib;webcore_svg.lib;webkit.lib;webkit_gpu.lib;webkit_media.lib;webkit_support.lib;webkit_support_common.lib;webkit_support_gfx.lib;webkit_user_agent.lib;wtf.lib;yarr.lib;yuv_convert.lib;yuv_convert_simd_x86.lib;zlib.lib;ssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(COMPTOP)\global\src\OpenSource\Chromium\binary\lib\win\$(ACPLATFORM)\$(DEBREL);$(GLIB);$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries></IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>npapi_layout_test_plugin.def</ModuleDefinitionFile>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>_NPAPI_TEST_BUILD;_WIN32_WINNT=0x0601;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_WEBKIT_COMPOSITOR=1;WEBUI_TASK_MANAGER=1;ENABLE_REMOTING=1;ENABLE_P2P_APIS=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;USE_SKIA=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;ENABLE_REGISTER_PROTOCOL_HANDLER=1;ENABLE_WEB_INTENTS=1;ENABLE_PLUGIN_INSTALLATION=1;UNIT_TEST;U_USING_ICU_NAMESPACE=0;U_STATIC_IMPLEMENTATION;SK_BUILD_NO_IMAGE_ENCODE;GR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h";GR_AGGRESSIVE_SHADER_OPTS=1;__STDC_FORMAT_MACROS;NO_TCMALLOC;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(GOBJ)\npapi_layout_test_plugin;$(GINC);$(WEBKITSRC);$(WEBKITSRC)\third_party\icu\public\common;$(WEBKITSRC)\third_party\wtl\include;$(WEBKITSRC)\third_party\khronos;..;$(WEBKITSRC)\third_party\npapi;$(WEBKITSRC)\third_party\npapi\bindings;$(WEBKITSRC)\v8\include;$(WEBKITSRC)\skia\config;$(WEBKITSRC)\third_party\skia\include\config;$(WEBKITSRC)\third_party\skia\include\core;$(WEBKITSRC)\third_party\skia\include\effects;$(WEBKITSRC)\third_party\skia\include\pdf;$(WEBKITSRC)\third_party\skia\include\gpu;$(WEBKITSRC)\third_party\skia\include\gpu\gl;$(WEBKITSRC)\third_party\skia\include\ports;$(WEBKITSRC)\third_party\skia\include\utils;$(WEBKITSRC)\skia\ext;$(WEBKITSRC)\skia\config\win;$(OutDir)obj\global_intermediate\ui\gfx;$(OutDir)obj\global_intermediate\net;$(OutDir)obj\global_intermediate\webkit;$(WEBKITSRC)\third_party\directxsdk\files\Include;$(WEBKITSRC)\third_party\platformsdk_win7\files\Include;$(VSInstallDir)\VC\atlmfc\include;$(WEBKITSRC)\third_party\WebKit\Source\ThirdParty\gtest\include;$(WEBKITSRC)\third_party\WebKit\JavaScriptCore;$(WEBKITSRC)\third_party\WebKit\Source\WebCore\ForwardingHeaders;$(CRXAPPS)\AcJsCoreStub;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PluginObject.cpp" />
+    <ClCompile Include="TestObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PluginObject.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="TestObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="npapi_layout_test_plugin.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="npapi_layout_test_plugin.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

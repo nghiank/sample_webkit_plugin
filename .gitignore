@@ -11,3 +11,14 @@
 *.lai
 *.la
 *.a
+
+# Visual studio files
+_UpgradeReport_Files
+Debug
+ipch
+*.aps
+*.wrn
+*.suo
+*.sdf
+*.user
+*.opensdf
